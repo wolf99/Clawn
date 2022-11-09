@@ -1,4 +1,5 @@
 # Clawn
+
 Clawn is a programming language developed with the goal of making it easy to write high-quality, safe programs.
 
 ![demo](https://user-images.githubusercontent.com/33174108/199721317-3729b791-fa9b-49a6-af59-a36d5cf9e8a0.gif)
@@ -18,6 +19,8 @@ There are various other features as described below.
 
 
 At first,download [Dockerfile](https://github.com/Naotonosato/Clawn/blob/main/Dockerfile) and execute the following commands.
+
+
 ```shell
 docker image build -t clawn-playground-image:0.1 .
 docker run --name clawn-playground -it clawn-playground-image:0.1 /bin/bash
@@ -127,7 +130,7 @@ count: 3
 count: 4
 ```
 
-A repeat expression is one that increments the counter variable while the `condition` is satisfied by setting `repeat `name of the counter variable`:`condition`, and repeats the following expression, returning a value in the same way as if and block.
+A repeat expression is one that increments the counter variable while the `condition` is satisfied by setting `repeat `name of the counter variable`:`condition, and repeats the following expression, returning a value in the same way as if and block.
 
 + See also.
 
@@ -166,7 +169,7 @@ abc
 
 
 
-The function is defined as a polymorphic function in the form function `function name` (`argument1`,`argument2`...) The function is defined as a polymorphic function in the form ``(`argument1`,`argument2`...)''. A `requirement` described below may be specified for the argument to restrict the type of the argument passed, although a type annotation is not required. Also, functions in Clawn are first-class objects and can be assigned to variables or passed as arguments to functions.
+The function is defined as a polymorphic function in the form function `function name` (`argument1`,`argument2`...) The function is defined as a polymorphic function in the form ``(`argument1`,`argument2`...)``. A `requirement` described below may be specified for the argument to restrict the type of the argument passed, although a type annotation is not required. Also, functions in Clawn are first-class objects and can be assigned to variables or passed as arguments to functions.
 
 + struct
 
@@ -196,7 +199,7 @@ structure `structure name`.
 
 }
 
-and can be instantiated in the form `structure name` {`member name`:`expr`...} and can be instantiated in the form ``structure name`{`member name`:`expr`…}.
+and can be instantiated in the form `structure name` {`member name`:`expr`...} and can be instantiated in the form ``structure name`{`member name`:`expr`…} ``.
 
 Like functions, the `requirements` described below can be applied to members.
 
@@ -275,13 +278,13 @@ The requirement can be a function argument, a structure member, or a tag of a di
 The requirement clause is a function argument, a member of a structure, or a tag of a direct sum type. Requirement clauses are
 
 + `value`, which requires the type to be a value type
-+ value:X`, which requires it to be a value type satisfying requirement `X`, or
++ `value:X`, which requires it to be a value type satisfying requirement `X`, or
 + `reference`, which requires it to be a reference type
 + `reference:X` requiring it to be a reference type to a type satisfying requirement `X`.
 + `has: name`, which requires it to have a member named `name`.
 + `has:name:X`, which requires the type to have a member `name` that satisfies requirement `X`.
 
-and that it can be called from now on with the arguments `arg1,arg2... In the future, we plan to implement `callable_with`, which requires that the function be callable with `arg1,arg2...` arguments, and `returns:X`, which requires that the return type satisfy the requirement `X`.
+and that it can be called from now on with the arguments `arg1,arg2...` In the future, we plan to implement `callable_with`, which requires that the function be callable with `arg1,arg2...` arguments, and `returns:X`, which requires that the return type satisfy the requirement `X`.
 
 Also, the requirement name should be　
 
@@ -315,6 +318,7 @@ Clawn has a memory management mechanism that statically verifies the dependencie
 However, this feature is experimental and will be further stabilized and optimized in the future.
 
 ## Roadmap
+
 Clawn is still a work in progress, but will be actively developed after 2023 (after the author's college entrance exam).
 + Module system
 + Support for OOP
